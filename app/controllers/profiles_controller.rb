@@ -39,10 +39,4 @@ class ProfilesController < ApplicationController
       redirect_to(root_url) unless @user == current_user
     end
 end
-####app/controllers/users_controller.rb (latest version of this file)
-class UsersController < ApplicationController
-  before_action :authenticate_user!
-  def show
-    @user = User.find( params[:id] )
-  end
-end
+
