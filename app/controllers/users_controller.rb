@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   
   def index
+    @user = User.all
+    @users = User.includes(:profile)
+
   end
   
   def show
